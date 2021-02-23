@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import { config, createSchema } from '@keystone-next/keystone/schema';
+import { User } from './schemas/User';
 
 const databaseUrl = process.env.DATABASE_URL || 'mongodb://localhost/keystone_urbanstyles';
 
@@ -22,7 +23,7 @@ export default config({
     // TODO: Add seeding here
   },
   lists: createSchema({
-    // Schema items go ehre
+    User,
   }),
   ui: {
     // Add access control
