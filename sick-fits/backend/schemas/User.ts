@@ -10,4 +10,9 @@ export const User = list({
     password: password(),
     // TODO: add roles, cart & orders
   },
+  ui: {
+    listView: {
+      initialColumns: ['name', 'email'],
+    },
+  },
 });
