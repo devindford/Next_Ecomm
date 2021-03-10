@@ -10,9 +10,9 @@ const Header = () => (
       <Logo>
         <Link href="/">Urban Styles</Link>
       </Logo>
+      <Nav />
     </div>
     <div className="sub-bar">Search</div>
-    <Nav />
   </HeaderStyle>
 );
 
