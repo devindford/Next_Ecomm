@@ -61,7 +61,7 @@ const CreateProduct = () => {
           Description
           <textarea
             name="description"
-            id="price"
+            id="description"
             placeholder="Description"
             value={inputs.description}
             onChange={handleChange}
