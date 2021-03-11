@@ -6,7 +6,7 @@ import { ProductListStyles } from './styles/ProductListStyles.js';
 const Products = () => {
   const { data, error, loading } = useQuery(QUERY_ALL_PRODUCTS);
   const productData = data && data.allProducts;
-  console.log(productData);
+
   if (error) {
     return <p>{error.message}</p>;
   }

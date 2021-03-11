@@ -1,7 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export const useForm = (initial = {}) => {
   const [inputs, setInputs] = useState(initial);
+
+  const initialValues = Object.values(initial).join('');
+
+  useEffect(() => {
+    setInputs(initial);
+    // eslint-disable-next-line
+  }, [initialValues]);
+
   const handleChange = (event) => {
     let { value, name, type } = event.target;
     if (type === 'number') {

@@ -9,6 +9,7 @@ const SingleProduct = ({ id }) => {
     variables: { id },
   });
   const product = data?.Product;
+
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
   return (
