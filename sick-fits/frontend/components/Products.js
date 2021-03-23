@@ -1,12 +1,17 @@
 import { useQuery } from '@apollo/client';
+import { perPage } from '../config.js';
 import { QUERY_ALL_PRODUCTS } from '../gql/queries/queryAllProducts.js';
 import Product from './Product.js';
 import { ProductListStyles } from './styles/ProductListStyles.js';
 
-const Products = () => {
-  const { data, error, loading } = useQuery(QUERY_ALL_PRODUCTS);
+const Products = ({ page }) => {
+  const { data, error, loading } = useQuery(QUERY_ALL_PRODUCTS, {
+    variables: {
+      first: perPage,
+      skip: page * perPage - perPage,
+    },
+  });
   const productData = data && data.allProducts;
-  console.log(productData);
   if (error) {
     return <p>{error.message}</p>;
   }
