@@ -12,7 +12,7 @@ export const InnerModalStyles = styled.div`
   position: relative;
   left: 50%;
   top: 50%;
-  padding: 0 0.5rem;
+  padding: 0 1rem;
   transform: translate(-50%, -50%);
   border-radius: 2.5rem;
   border: none;
